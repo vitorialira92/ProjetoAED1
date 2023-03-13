@@ -175,7 +175,7 @@ namespace ProjetoAEd1
                 encerrar(false);
                 desistencia.Hide();
             }
-            else if (pedidosFeitos == 14)
+            else if (pedidosFeitos == 27)
             {
                 encerrar(true);
             }

@@ -20,8 +20,6 @@ namespace ProjetoAEd1
         {
             InitializeComponent();
             player = new SoundPlayer();
-            player2 = new SoundPlayer();
-            player2.SoundLocation = "button-Click.wav";
             PlayMusic();
             estaTocando = true;
             Image imagem;
@@ -37,7 +35,6 @@ namespace ProjetoAEd1
 
         public static void PlayMusicButton()
         {
-            player2.Play();
         }
 
         public static void StopMusic()
@@ -54,7 +51,7 @@ namespace ProjetoAEd1
         private void button1_Click(object sender, EventArgs e)
         {
             PlayMusicButton();
-            Intro intro = new Intro(player, estaTocando);
+            Intro intro = new Intro();
             intro.Show();
             this.Hide();
         }

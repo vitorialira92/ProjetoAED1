@@ -14,14 +14,9 @@ namespace ProjetoAEd1
 {
     public partial class Intro : Form
     {
-        SoundPlayer player;
-        bool estaTocando;
-        public Intro(SoundPlayer player, bool estaTocando)
+        public Intro()
         {
             InitializeComponent();
-            this.player = player;
-            this.estaTocando = estaTocando;
-            tocar();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,28 +44,6 @@ namespace ProjetoAEd1
 
         private void musica_Click(object sender, EventArgs e)
         {
-            tocar();
-        }
-        public void tocar()
-        {
-            Image imagem;
-            if (estaTocando)
-            {
-                player.Stop();
-                estaTocando = false;
-                imagem = Image.FromFile(@"no-music.PNG");
-                musica.BackgroundImage = imagem;
-
-            }
-
-            else
-            {
-                player.PlayLooping();
-                estaTocando = true;
-                imagem = Image.FromFile(@"botao-musica.PNG");
-                musica.BackgroundImage = imagem;
-            }
-
         }
     }
 }

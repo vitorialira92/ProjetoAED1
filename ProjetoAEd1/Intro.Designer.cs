@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Intro));
             this.jogar = new System.Windows.Forms.Button();
-            this.musica = new System.Windows.Forms.Button();
             this.nomeJogador = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,20 +49,6 @@
             this.jogar.TabIndex = 0;
             this.jogar.UseVisualStyleBackColor = false;
             this.jogar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // musica
-            // 
-            this.musica.BackColor = System.Drawing.Color.Transparent;
-            this.musica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("musica.BackgroundImage")));
-            this.musica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.musica.FlatAppearance.BorderSize = 0;
-            this.musica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.musica.Location = new System.Drawing.Point(932, 41);
-            this.musica.Name = "musica";
-            this.musica.Size = new System.Drawing.Size(66, 70);
-            this.musica.TabIndex = 1;
-            this.musica.UseVisualStyleBackColor = false;
-            this.musica.Click += new System.EventHandler(this.musica_Click);
             // 
             // nomeJogador
             // 
@@ -111,7 +95,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nomeJogador);
-            this.Controls.Add(this.musica);
             this.Controls.Add(this.jogar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -130,7 +113,6 @@
         #endregion
 
         private System.Windows.Forms.Button jogar;
-        private System.Windows.Forms.Button musica;
         private System.Windows.Forms.TextBox nomeJogador;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;

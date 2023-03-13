@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace ProjetoAEd1
     internal class DBConnection
     {
         private MySqlConnection connection;
+        private static SQLiteConnection connection2;
         private MySqlCommand command;
         private string server;
         private string database;
