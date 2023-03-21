@@ -12,11 +12,20 @@ namespace ProjetoAEd1
         private int id;
         private int quantidade;
 
-        public Botao(int i)
+        public Botao()
         {
             ocupado = false;
             id = 0;
             quantidade = 0;
+        }
+
+
+        public void ocupar(int id)
+        {
+            ocupado = true;
+            this.id = id;
+            this.quantidade++;
+            
         }
 
         public bool getOcupado()
@@ -29,13 +38,7 @@ namespace ProjetoAEd1
             return id;
         }
 
-        public void ocupar(int id)
-        {
-            ocupado = true;
-            this.id = id;
-            this.quantidade++;
-            
-        }
+
         public void desocupar()
         {
             quantidade--;

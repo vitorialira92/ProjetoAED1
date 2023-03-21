@@ -61,7 +61,7 @@ namespace ProjetoAEd1
                 //inicialiando cada botão e contador
                 for(int i=0;i<6;i++) 
                 {
-                    botoes[i] = new Botao(i+1);
+                    botoes[i] = new Botao();
                     contadores[i] = 0;
                 }
             }
@@ -226,47 +226,64 @@ namespace ProjetoAEd1
 
         }
 
+
         private void adicionar(int id) //adiciona um elemento na bandeja
         {
-            for(int i = 0; i < 6; i++)
+            int aux_posicao = -1; 
+            for(int i = 0; i < 6; i++) //verificando se há algum lugar ocupado com o mesmo tipo de item
             {
-                if (!botoes[i].getOcupado() || (botoes[i].getOcupado() && botoes[i].getQuant() < 2) && botoes[i].getId() == id)
+                if (botoes[i].getId() == id)
                 {
-                    botoes[i].ocupar(id);
-                    string aux = id.ToString() + "-" + botoes[i].getQuant().ToString()+".PNG";
-                    System.Drawing.Image imagem;
-                    imagem = System.Drawing.Image.FromFile(@aux);
-                    switch (i){
-                        case 0:
-                            button1.BackgroundImage = imagem;
-                            button1.Enabled = true;
-                            break;
-                        case 1:
-                            button2.BackgroundImage = imagem;
-                            button2.Enabled = true;
-                            break;
-                        case 2:
-                            button3.BackgroundImage = imagem;
-                            button3.Enabled = true;
-                            break;  
-                        case 3: 
-                            button4.BackgroundImage = imagem;
-                            button4.Enabled = true;
-                            break;
-                        case 4:
-                            button5.BackgroundImage = imagem;
-                            button5.Enabled = true;
-                            break;
-                        case 5:
-                            button6.BackgroundImage = imagem;
-                            button6.Enabled = true;
-                            break;
-
-                    }
+                    aux_posicao = i;
                     i = 6;
-                    
                 }
             }
+            if(aux_posicao == -1) //se não há, acha o primeiro desocupado
+            {
+                int i = 0;
+                while (botoes[i].getId() != 0)
+                {
+                    i++;
+                }
+                aux_posicao = i;
+            }
+            
+            //código refeito para correção de bug
+
+            botoes[aux_posicao].ocupar(id);
+            string aux = id.ToString() + "-" + botoes[aux_posicao].getQuant().ToString() + ".PNG";
+            System.Drawing.Image imagem;
+            imagem = System.Drawing.Image.FromFile(@aux);
+            switch (aux_posicao)
+            {
+                case 0:
+                    button1.BackgroundImage = imagem;
+                    button1.Enabled = true;
+                    break;
+                case 1:
+                    button2.BackgroundImage = imagem;
+                    button2.Enabled = true;
+                    break;
+                case 2:
+                    button3.BackgroundImage = imagem;
+                    button3.Enabled = true;
+                    break;
+                case 3:
+                    button4.BackgroundImage = imagem;
+                    button4.Enabled = true;
+                    break;
+                case 4:
+                    button5.BackgroundImage = imagem;
+                    button5.Enabled = true;
+                    break;
+                case 5:
+                    button6.BackgroundImage = imagem;
+                    button6.Enabled = true;
+                    break;
+
+            }
+
+                        
         }
         
         //botões de cima que adicionam os elementos na bandeja
@@ -533,6 +550,11 @@ namespace ProjetoAEd1
         private void desistir_Click(object sender, EventArgs e)
         {
             desistencia.Show();
+        }
+
+        private void textPontuacao_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

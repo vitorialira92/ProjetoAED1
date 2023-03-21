@@ -281,6 +281,7 @@
             this.textPontuacao.Size = new System.Drawing.Size(138, 20);
             this.textPontuacao.TabIndex = 15;
             this.textPontuacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPontuacao.TextChanged += new System.EventHandler(this.textPontuacao_TextChanged);
             // 
             // textProximos
             // 
