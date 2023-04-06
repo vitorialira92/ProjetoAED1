@@ -10,7 +10,7 @@
 - 🎓 &nbsp; A matéria faz parte da grade de Engenharia de Computação - UFSCar (São Carlos - SP);
 - 💭 &nbsp; Definição do projeto: O Projeto deverá exemplificar/demonstrar a aplicação prática de conceitos/temas/estruturas de dados/algoritmos estudados na disciplina. A(s) aplicação(ões)/tema(s) do projeto poderá(ão) ser escolhidas(os) pelos(as) estudantes, dado que atendidas as especificações detalhadas, fornecidas antecipadamente, e mediante interação e acordo com o(a) docente responsável;
 - 👩🏻‍💻 &nbsp; Estruturas utilizadas na aplicação: filas e estruturas aninhadas;
-- 💿 &nbsp; Nota final: 
+- 💿 &nbsp; Nota final: 100/100
 
 
 
