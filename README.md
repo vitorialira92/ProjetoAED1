@@ -5,7 +5,7 @@
 
 <h3> 👨🏻‍💻 Sobre o projeto </h3>
 
-- 🔭 &nbsp; O projeto é foi desenvolvido para Algoritmos e Estruturas de Dados 1;
+- 🔭 &nbsp; O projeto foi desenvolvido para Algoritmos e Estruturas de Dados 1;
 - 👨‍🏫 &nbsp; O curso foi ministrado pelo professor Roberto Ferrari Junior;
 - 🎓 &nbsp; A matéria faz parte da grade de Engenharia de Computação - UFSCar (São Carlos - SP);
 - 💭 &nbsp; Definição do projeto: O Projeto deverá exemplificar/demonstrar a aplicação prática de conceitos/temas/estruturas de dados/algoritmos estudados na disciplina. A(s) aplicação(ões)/tema(s) do projeto poderá(ão) ser escolhidas(os) pelos(as) estudantes, dado que atendidas as especificações detalhadas, fornecidas antecipadamente, e mediante interação e acordo com o(a) docente responsável;
